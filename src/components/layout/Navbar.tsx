@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { Menu, X, Sun } from 'lucide-react';
 
 interface NavbarProps {
@@ -16,30 +17,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenCalculator }) => {
       <div className="max-w-[1440px] mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between h-16 sm:h-[68px]">
           
-          {/* Left Brand Identity: Droplet Icon + PSO + Queueing Calculator */}
+          {/* Left Brand Identity: PSO Logo + Text */}
           <a href="#" className="flex items-center gap-2.5 group">
-            {/* Organic Green Droplet Mark matching reference */}
-            <div className="w-7 h-7 relative flex items-center justify-center shrink-0">
-              <svg viewBox="0 0 24 24" fill="none" className="w-6 h-6 drop-shadow-[0_0_8px_rgba(53,230,167,0.55)]">
-                <path
-                  d="M12 2.2C12 2.2 4.5 11 4.5 16.2C4.5 20.2 7.8 23.5 12 23.5C16.2 23.5 19.5 20.2 19.5 16.2C19.5 11 12 2.2 12 2.2Z"
-                  fill="url(#dropletGradient)"
-                />
-                {/* Subtle inner gloss highlight */}
-                <path
-                  d="M10 6C9 9 7.5 13 7.5 16C7.5 17.5 8 19 9 20"
-                  stroke="rgba(255,255,255,0.4)"
-                  strokeWidth="1.2"
-                  strokeLinecap="round"
-                />
-                <defs>
-                  <linearGradient id="dropletGradient" x1="12" y1="2.2" x2="12" y2="23.5" gradientUnits="userSpaceOnUse">
-                    <stop stopColor="#49E8B0" />
-                    <stop offset="0.65" stopColor="#20C98E" />
-                    <stop offset="1" stopColor="#063D31" />
-                  </linearGradient>
-                </defs>
-              </svg>
+            {/* Official PSO Roundel Logo */}
+            <div className="w-8 h-8 relative flex items-center justify-center shrink-0">
+              <Image
+                src="/images/pso-logo.png"
+                alt="PSO Logo"
+                width={32}
+                height={32}
+                className="w-full h-full object-contain drop-shadow-[0_0_8px_rgba(53,230,167,0.35)]"
+                priority
+              />
             </div>
             
             <div className="flex items-baseline gap-2">
