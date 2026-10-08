@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
 
           <div className="text-[11px] text-zinc-500 md:text-right space-y-1">
             <div>Based on a 300-vehicle observation dataset for academic study</div>
-            <div className="text-zinc-600">Built with Next.js + TypeScript</div>
+            <div className="text-zinc-600">Built with Next.js + C sharp</div>
           </div>
         </div>
 
